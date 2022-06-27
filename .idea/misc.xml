@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Cherry/AndroidStudioProjects/OMDB_Challenge_App/app/src/main/res/drawable/default_cover.xml" value="0.186" />
+        <entry key="..\:/Users/Cherry/AndroidStudioProjects/OMDB_Challenge_App/app/src/main/res/drawable/linear_circle.xml" value="0.186" />
+        <entry key="..\:/Users/Cherry/AndroidStudioProjects/OMDB_Challenge_App/app/src/main/res/drawable/linear_circle3.xml" value="0.186" />
+        <entry key="..\:/Users/Cherry/AndroidStudioProjects/OMDB_Challenge_App/app/src/main/res/layout/activity_details.xml" value="0.2692502532928065" />
+        <entry key="..\:/Users/Cherry/AndroidStudioProjects/OMDB_Challenge_App/app/src/main/res/layout/activity_main.xml" value="0.2692502532928065" />
+        <entry key="..\:/Users/Cherry/AndroidStudioProjects/OMDB_Challenge_App/app/src/main/res/layout/item_movi.xml" value="0.2692502532928065" />
+        <entry key="..\:/Users/Cherry/AndroidStudioProjects/OMDB_Challenge_App/app/src/main/res/layout/toolbar_xml.xml" value="0.1522289766970618" />
+        <entry key="..\:/Users/Cherry/AndroidStudioProjects/OMDB_Challenge_App/app/src/main/res/menu/activity_main_actions.xml" value="0.3082051282051282" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
