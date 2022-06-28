@@ -32,8 +32,7 @@
                     android:id="@+id/imageView_poster"
                     android:layout_width="133dp"
                     android:layout_height="150dp"
-                    android:scaleType="fitXY"
-                    app:srcCompat="@drawable/ic_launcher_background" />
+                    android:scaleType="fitXY" />
 
                 <TextView
                     android:id="@+id/textView_title"
@@ -44,7 +43,7 @@
                     android:lineSpacingExtra="2sp"
                     android:singleLine="false"
                     android:textColor="#1d1d1d"
-                    android:textSize="14sp"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
 

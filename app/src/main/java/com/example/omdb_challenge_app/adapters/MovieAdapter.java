@@ -1,6 +1,7 @@
 package com.example.omdb_challenge_app.adapters;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,9 +26,12 @@ import java.util.logging.ConsoleHandler;
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder>{
 
     List<Movie> movielist;
-        public MovieAdapter(List<Movie> movielist) {
+    int position = 0;
+        public MovieAdapter(List<Movie> movielist,int count) {
         this.movielist = movielist;
+        this.position = count;
     }
+
 
 
     @NonNull
@@ -44,9 +48,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     public void onBindViewHolder(@NonNull final MovieViewHolder movieViewHolder, final int i) {
 
         //movieViewHolder.title.setText("Title   "+movielist.get(i).getTitle());
-        movieViewHolder.title.setText(movielist.get(i).getTitle());
+        try {
+            movieViewHolder.title.setText(movielist.get(i).getTitle());
 
-        Glide.with(movieViewHolder.poster.getContext()).load(movielist.get(i).getPoster()).into(movieViewHolder.poster);
+            Glide.with(movieViewHolder.poster.getContext()).load(movielist.get(i).getPoster()).into(movieViewHolder.poster);
 
             movieViewHolder.fragment_container.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -56,16 +61,40 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
                             movieViewHolder.fragment_container.getContext()), DetailsActivity.class);
 
                     detailsIntent.putExtra(Constraints.
-                            MOVIEID,movielist.get(i).getImdbID());
+                            MOVIEID, movielist.get(i).getImdbID());
 
                     movieViewHolder.fragment_container.getContext().startActivity(detailsIntent);
                 }
             });
+        } catch (Exception e){
+            Log.i("Error_","err_"+e.getMessage());
+        }
     }
 
     @Override
     public int getItemCount() {
-        return movielist.size();
+        if (position > 0){
+            int returnRemain = (6 * (position + 1)) - (6 * (position));
+            try {
+                if ( (movielist.size() - (6 * (position))) > returnRemain) {
+                    return 6;
+                } else {
+                    return (movielist.size() - (6 * (position)));
+                }
+            } catch (Exception e){
+                return 0;
+            }
+        } else {
+            try {
+                if (movielist.size() > 6) {
+                    return 6;
+                }
+                return movielist.size();
+            } catch (Exception e){
+                return 0;
+            }
+        }
+
     }
 
 
